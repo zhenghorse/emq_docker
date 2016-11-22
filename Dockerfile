@@ -67,9 +67,8 @@ RUN apk --no-cache add \
         git \
         make \
         perl \
-    && git clone -b ${EMQ_VERSION} https://github.com/emqtt/emqttd-relx.git /emqttd \
+    && git clone -b ${EMQ_VERSION} https://github.com/zhenghorse/emqttd-relx.git /emqttd \
     && cd /emqttd \
-    && git submodule add https://github.com/emqtt/emq_kafka_bridge plugins/emqttd_plugin_kafka_bridge \
     && make \
     && mkdir /opt && mv /emqttd/_rel/emqttd /opt/emqttd \
     && cd / && rm -rf /emqttd \
