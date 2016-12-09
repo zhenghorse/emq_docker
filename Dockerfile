@@ -71,7 +71,7 @@ RUN apk --no-cache add \
     && cd /emqttd \
     && make \
     && mkdir /opt && mv /emqttd/_rel/emqttd /opt/emqttd \
-    && cd / && rm -rf /emqttd \
+    && cd /  \
     && mv /start.sh /opt/emqttd/start.sh \
     && chmod +x /opt/emqttd/start.sh \
     && apk --purge del \
