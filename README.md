@@ -1,6 +1,6 @@
 # EMQ Docker
 
-EMQ (Erlang MQTT Broker) is a massively scalable and clusterable MQTT V3.1/V3.1.1 broker written in Erlang/OTP.
+*EMQ* (Erlang MQTT Broker) is a distributed, massively scalable, highly extensible MQTT message broker written in Erlang/OTP.
 
 Current docker image size: 37.1 MB 
 
@@ -12,7 +12,6 @@ You can build this docker image by yourself.
 git clone -b master https://github.com/emqtt/emq_docker.git
 cd emq_docker
 docker build -t emq:latest . 
-
 ```
 
 ### Run emqttd
@@ -54,6 +53,7 @@ Use the environment variable to configure the EMQ docker container
 | EMQ_HTTPS_PORT           | 8084               | HTTPS/WSS port                        |
 | EMQ_HTTPS_ACCEPTORS      | 32                 | HTTPS/WSS acceptors                   |
 | EMQ_HTTPS_MAX_CLIENTS    | 500000             | HTTPS/WSS max clients                 |
+| EMQ_MAX_PACKET_SIZE      | 64KB               | Max Packet Size Allowed               |
 
 For example, set mqtt tcp port to 1883
 
